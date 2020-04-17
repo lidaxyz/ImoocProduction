@@ -1,0 +1,240 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+a {
+	color: #000;
+	text-decoration: none;
+}
+body {
+	min-width: 1200px;
+}
+.wrap {
+	width: 1200px;
+	margin: 0 auto;
+}
+/*头部 logo title 左浮动, 其余右浮动*/
+/*底部*/
+.header,
+.footer {
+	background-color: #eee;
+	overflow: hidden;
+}
+.header {
+	height: 110px;
+	line-height: 110px;
+	border-bottom: 2px solid rgb(36, 135, 201);
+}
+.footer {
+	height: 80px;
+	position: relative;
+	bottom: 0;
+	text-align: center;
+	border-top: 2px solid rgb(36, 135, 201);
+	font-size: 16px;
+	line-height: 30px;
+	padding-top: 30px;
+	color: #808080;
+}
+.logo,
+.title {
+	float: left;
+	cursor: pointer;
+}
+.title {
+	font-size: 30px;
+}
+.title a {
+	font-size: 18px;
+	color: #808080;
+}
+.phone,
+.myimooc,
+.nav {
+	float: right;
+	font-size: 15px;
+	margin: 0 10px;
+}
+.phone img {
+	width: 12px;
+	height: 20px;
+}
+.myimooc .triangle {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 10px solid #000;
+}
+.myimooc .mymeassage {
+	display: inline-block;
+	width: 140px;
+	height: 300px;
+	line-height: 26px;
+	background-color: #fff;
+	position: absolute;
+	top: 70px;
+	border: 1px solid rgb(251, 116, 3);
+	font-size: 12px;
+	padding-top: 5px;
+	display: none;
+}
+.myimooc .mymeassage a {
+	display: block;
+	padding: 0 20px;
+	margin: 0;
+	color: #808080;
+}
+.myimooc .mymeassage .line {
+	width: 120px;
+	margin: 0 10px;
+	border-top: 1px dashed #808080;
+}
+.nav .select {
+	color: rgb(251, 116, 3);
+}
+.myimooc a,
+.nav a {
+	margin: 0 10px;
+}
+.myimooc:hover .mymeassage {
+	display: block;
+}
+.mymeassage a:hover {
+	background-color: #eee;
+}
+/*主体部分*/
+.main {
+	height: 700px;
+}
+.main .position {
+	font-size: 16px;
+	margin: 10px 0;
+}
+.position span {
+	color: #808080;
+}
+.box {
+	height: 600px;
+	margin: 0 auto;
+	border: 1px solid rgba(251, 116, 3, .5);
+	border-radius: 12px;
+
+}
+.box .box_top {
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	color: #fff;
+	background-color: rgb(251, 116, 3);
+	border-radius: 8px;
+	padding-left: 10px;
+}
+.box .container {
+	width: 700px;
+	height: 400px;
+	line-height: 40px;
+	margin: 40px auto;
+	font-size: 16px;
+
+}
+.container span {
+	display: inline-block;
+	width: 80px;
+	text-align-last: justify;
+	margin-right: 30px;
+	position: relative;
+}
+.container .tips::before {
+	content: '*';
+	position: absolute;
+	left: -10px;
+	color: #f00;
+}
+
+.container span::after {
+	content: ':';
+	position: absolute;
+	right: -10px;
+}
+.container .input {
+	width: 228px;
+	height: 20px;
+	border: 1px solid #aaa;
+	padding: 0 10px;
+	margin-right: 10px;
+}
+.container .select {
+	width: 250px;
+}
+.container .information {
+	font-size: 12px;
+	font-style: normal;
+	color: rgb(251, 116, 3);
+}
+.container .information:nth-child(2) {
+	position: absolute;
+	left: 300px;
+}
+.container .namerule {
+	text-decoration: underline;
+	position: relative;
+	cursor: pointer;
+	font-weight: normal;
+}
+.container .rule {
+	display: none;
+	line-height: 30px;
+	width: 450px;
+	height: 220px;
+	border: 1px solid rgb(36, 135, 201);
+	background-color: #fff;
+	color: #808080;
+	position: absolute;
+	left: 70px; 
+	top: 15px;
+	text-align-last: left;
+	overflow: hidden;
+	padding: 15px;
+}
+.container .namerule:hover .rule {
+	display: block;
+}
+
+/*  如果输入的密码满足条件，内容是纯数字、纯字母或者纯符号，密码强度为低，输入框后面的小方块不变；
+    如果是两种类型的结合，那么密码强度为一般，也就是第二块变为橘色；
+	如果是三种类型的结合，那么密码强度为高，第三块变为绿色 */
+.container .strength {
+	width: 45px;
+	height: 8px;
+	background-color: #dfe6e9;
+	display: inline-block;
+	border: 1px solid #dfe6e9;
+}
+.container .strength:first-of-type {
+	background-color: #f00;
+}
+
+
+.container .center {
+	line-height: 50px;
+	text-align: center;
+}
+.center a {
+	color: #00bfff;
+}
+.center input[type="submit"] {
+	width: 200px;
+	height: 35px;
+	border-radius: 10px;
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+	background-color: rgba(251, 116, 3, 1);
+	cursor: pointer;
+}
+.center input[type="submit"]:hover {
+	background-color: rgba(251, 116, 3, .8);
+}
