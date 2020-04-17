@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>todolist-计划列表</title>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<header>
+		<article class="wrap">
+			<a class="title" href="javascript:;">TodoList</a>
+			<input class="input" id="input" type="text" placeholder="增加计划"/>
+			<buttom class="clear" id="clear">清空</buttom>
+		</article>
+	</header>
+	
+	<section id="container">
+		<article class="wrap">
+			<h1>正在进行<span class="total" id="underway_total"></span></h1>
+			<ul class="underway_list" id="underway_list">
+				<!-- <li class="item">
+					<input class="item_checkbox" type="checkbox" />
+					<span class="item_text"><input class="item_changeText" type="text"></span>
+					<button class="item_delete" type="button">删除</button>
+				</li> -->
+			</ul>
+		</article>
+		
+		<article class="wrap" id="finished">
+			<h1>已经完成<span class="total" id="finished_total"></span></h1>
+			<ul class="finished_list" id="finished_list">
+				<!-- <li class="item">
+					<input class="item_checkbox" type="checkbox" checked="" />
+					<span class="item_text">123</span>
+					<button class="item_delete" type="button">删除</button>
+				</li> -->
+			</ul>
+		</article>
+	</section>
+	
+	<footer>
+		------- 开始你的计划吧 -------<br/>
+		&copy; 2019 Gavin Chen
+	</footer>
+	
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
